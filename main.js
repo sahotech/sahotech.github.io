@@ -1,6 +1,6 @@
 var sideMenu = document.getElementById("sideMenu");
 var jumptotop = document.getElementById("jumptotop");
-// var submit = document.getElementById("submit");
+
 
 // Jump to top
 function jumpToTop() {
@@ -28,7 +28,7 @@ function showLoader(){
 submit.document.innerHTML='Please wait...'
 }
 
-////////// Form //////////
+//    ========== Contact Form =============
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwD4N80CV_r41vb_2a5hscpCfqfyKBinFVDBqFn-Zlihyuul4Ez90LC4mmd9gEy-NJq/exec";
 const form = document.forms["submit-to-google-sheet"];
@@ -57,10 +57,4 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-//////////////////////////////////
-
-const name= document.getElementById('name');
-const email= document.getElementById('email');
-const subject= document.getElementById('subject');
-const message= document.getElementById('message');
 
