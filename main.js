@@ -1,7 +1,20 @@
+// Check if the browser supports service workers
+if ("serviceWorker" in navigator) {
+  // Register the service worker
+  navigator.serviceWorker.register("sw.js")
+    .then(function(registration) {
+      // Registration was successful
+      console.log("Service worker registered with scope: ", registration.scope);
+    })
+    .catch(function(error) {
+      // Registration failed
+      console.log("Service worker registration failed: ", error);
+    });
+}
+
+
 var sideMenu = document.getElementById("sideMenu");
 var jumptotop = document.getElementById("jumptotop");
-
-
 // Jump to top
 function jumpToTop() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -24,8 +37,8 @@ function closeMenu() {
   sideMenu.style.right = "-250px";
 }
 
-function showLoader(){
-submit.document.innerHTML='Please wait...'
+function showLoader() {
+  submit.document.innerHTML = "Please wait...";
 }
 
 //    ========== Contact Form =============
@@ -56,5 +69,3 @@ form.addEventListener("submit", (e) => {
       form.reset();
     });
 });
-
-
