@@ -642,7 +642,7 @@ button {
 /* ===========================================
 Small Screen  Section 
 ============================================== */
-@media only screen and (max-width: 550px) {
+@media (max-width: 768px) {
   #header,
   #about,
   #services,
